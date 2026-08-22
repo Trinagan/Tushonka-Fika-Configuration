@@ -1,4 +1,4 @@
-Meta.DisplayName=Tarkov (Fika Mod) 4.1.0+ testing
+Meta.DisplayName=Tarkov (Fika Mod) 4.1.0+
 Meta.Description=Tarkov Dedicated Server using SPT v4.1.0+ and the Fika Server Mod
 Meta.OS=Windows, Linux
 Meta.AarchSupport=NotSupported
@@ -24,7 +24,7 @@ Meta.NoCommercialUsage=True
 Meta.ConfigVersion=2
 Meta.ReleaseNotes=
 Meta.BreakingReleaseNotes=
-Meta.AppConfigId=f27f1374-5fbc-4870-836b-b01e393d6e1e
+Meta.AppConfigId=ed44da25-4075-4e31-b563-540a1559bf28
 Meta.ImportableExtensions=[]
 Meta.AppIsMultiIPAware=False
 App.DisplayName=Tarkov
