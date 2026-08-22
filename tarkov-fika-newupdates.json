@@ -73,7 +73,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"cd tarkov/server && DownloadURL=$(wget -qO- https://api.github.com/repos/sp-tarkov/build/releases/latest | jq -r \\\".body\\\" | grep -Eo \\\"https://[^ ]+\\.7z\\\") && wget -qO SPT.7z $DownloadURL && ../7-Zip/7zzs x -y -aoa SPT.7z >/dev/null 2>&1 && rm -f SPT.7z >/dev/null 2>&1 && chmod +x SPT_Runtime/SPT.Server.Linux >/dev/null 2>&1\"",
+        "UpdateSourceArgs": "-c \"cd tarkov/server && DownloadURL=$(wget -qO- https://api.github.com/repos/sp-tarkov/build/releases/latest | jq -r \\\".body\\\" | grep -Eo \\\"https://[^ ]+\\.7z\\\") && wget -qO SPT.7z $DownloadURL && ../7-Zip/7zzs x -y -aoa SPT.7z && rm -f SPT.7z >/dev/null 2>&1 && chmod +x SPT_Runtime/SPT.Server.Linux >/dev/null 2>&1\"",
         "SkipOnFailure": false
     },
     {
