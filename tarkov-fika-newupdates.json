@@ -73,7 +73,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"cd tarkov/server ../7-Zip/7zzs x -y -aoa SPT.7z\"",
+        "UpdateSourceArgs": "-c \"cd tarkov/server && ../7-Zip/7zzs x -y -aoa SPT.7z\"",
         "SkipOnFailure": false
     },
     {
