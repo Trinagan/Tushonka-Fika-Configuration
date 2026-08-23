@@ -312,6 +312,47 @@
         }
     },
     {
+        "DisplayName": "Enable Reviving",
+        "Category": "Tarkov:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, the reviving mechanic will be enabled",
+        "Keywords": "client,revive,enable,enableRevive",
+        "FieldName": "reviveConfig_enabled",
+        "InputType": "checkbox",
+        "ParamFieldName": "$.client.reviveConfig.enabled",
+        "DefaultValue": "true",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Max Revives",
+        "Category": "Tarkov:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets amount of maximum revives allowed. Set to 0 for infinite revives.",
+        "Keywords": "client,revive,enable,maxRevives",
+        "FieldName": "reviveConfig_maxRevives",
+        "InputType": "number",
+        "ParamFieldName": "$.client.reviveConfig.maxRevives",
+        "DefaultValue": "0",
+        "Placeholder": "0",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Revive Bleedout Time",
+        "Category": "Tarkov:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the time it takes the player to bleedout and become unrevivable.",
+        "Keywords": "client,revive,bleedout,enable,bleedoutTime",
+        "FieldName": "reviveConfig_bleedoutTime",
+        "InputType": "number",
+        "ParamFieldName": "$.client.reviveConfig.bleedoutTime",
+        "DefaultValue": "60",
+        "Placeholder": "60",
+        "EnumValues": {}
+    },
+    {
         "DisplayName": "Disable Chat Bots",
         "Category": "Tarkov:stadia_controller",
         "Subcategory": "Server:dns:1",
