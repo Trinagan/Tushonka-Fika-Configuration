@@ -79,9 +79,9 @@
     {
         "UpdateStageName": "Fika Server Mod Download",
         "UpdateSourcePlatform": "All",
-        "UpdateSource": "GithubRelease",
-        "UpdateSourceArgs": "project-fika/Fika-Server-CSharp",
-        "UpdateSourceVersion": "v2.3.5",
+        "UpdateSource": "FetchURLFromJQ",
+        "UpdateSourceData": "https://api.github.com/repos/project-fika/Fika-Server-CSharp/releases/tags/v2.3.5",
+        "UpdateSourceArgs": "$.assets[0].browser_download_url",
         "UpdateSourceTarget": "{{$FullBaseDir}}",
         "UnzipUpdateSource": true,
         "OverwriteExistingFiles": true,
