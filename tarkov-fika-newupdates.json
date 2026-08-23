@@ -65,7 +65,7 @@
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "Executable",
         "UpdateSourceData": "powershell.exe",
-        "UpdateSourceArgs": "-NoProfile -Command \"$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Set-Location -Path 'tarkov/server'; $DownloadURL = [regex]::Match((Invoke-RestMethod -UseBasicParsing -Uri 'https://api.github.com/repos/sp-tushonka/build/releases/latest').body, 'https://mirror\\.sp-tushonka\\.com/releases/SPT[^\\s\\r\\n]+\\.7z').Value; Invoke-WebRequest -UseBasicParsing -Uri \\\"$DownloadURL\\\" -OutFile 'SPT.7z'; & ../7-Zip/7z.exe x -y -aoa SPT.7z | Out-Null; Remove-Item -Path 'SPT.7z' -Force -ErrorAction SilentlyContinue | Out-Null\"",
+        "UpdateSourceArgs": "-NoProfile -Command \"$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Set-Location -Path 'tarkov/server'; $DownloadURL = Invoke-RestMethod -UseBasicParsing -Uri 'https://api.github.com/repos/sp-tarkov/build/releases/292176165').body.assets[0].browser_download_url.Value; Invoke-WebRequest -UseBasicParsing -Uri \\\"$DownloadURL\\\" -OutFile 'SPT.7z'; & ../7-Zip/7z.exe x -y -aoa SPT.7z | Out-Null; Remove-Item -Path 'SPT.7z' -Force -ErrorAction SilentlyContinue | Out-Null\"",
         "SkipOnFailure": false
     },
     {
@@ -73,7 +73,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"cd tarkov/server && DownloadURL=$(wget -qO- https://api.github.com/repos/sp-tarkov/build/releases/292176165 | jq -r '.assets[0].browser_download_url') && wget -qO SPT.7z \\\"$DownloadURL\\\"",
+        "UpdateSourceArgs": "-c \"cd tarkov/server && DownloadURL=$(wget -qO- https://api.github.com/repos/sp-tarkov/build/releases/292176165 | jq -r '.assets[0].browser_download_url') && wget -qO SPT.7z \\\"$DownloadURL\\\" && ../7-Zip/7zzs x -y -aoa SPT.7z >/dev/null 2>&1 && rm -f SPT.7z >/dev/null 2>&1 && chmod +x SPT/SPT.Server.Linux >/dev/null 2>&1\"",
         "SkipOnFailure": false
     },
     {
@@ -81,6 +81,7 @@
         "UpdateSourcePlatform": "All",
         "UpdateSource": "GithubRelease",
         "UpdateSourceArgs": "project-fika/Fika-Server-CSharp",
+        "UpdateSourceVersion": "v2.3.5",
         "UpdateSourceTarget": "{{$FullBaseDir}}",
         "UnzipUpdateSource": true,
         "OverwriteExistingFiles": true,
