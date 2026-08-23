@@ -343,7 +343,7 @@
         "DisplayName": "Revive Bleedout Time",
         "Category": "Tarkov:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "Sets the time it takes the player to bleedout and become unrevivable.",
+        "Description": "Sets the time in seconds for how long it takes the player to bleedout and become unrevivable.",
         "Keywords": "client,revive,bleedout,enable,bleedoutTime",
         "FieldName": "reviveConfig_bleedoutTime",
         "InputType": "number",
